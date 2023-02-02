@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="0x10c"
+run/main_scene="res://DCPU/DCPU_Input.tscn"
 config/icon="res://icon.png"
 
 [gui]
