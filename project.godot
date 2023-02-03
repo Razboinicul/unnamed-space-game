@@ -11,8 +11,16 @@ config_version=4
 [application]
 
 config/name="0x10c"
-run/main_scene="res://DCPU/DCPU_Input.tscn"
+run/main_scene="res://DCPU/DCPU.tscn"
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
 
 [gui]
 
