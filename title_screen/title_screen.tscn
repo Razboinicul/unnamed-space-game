@@ -5,6 +5,20 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Cover" type="Sprite" parent="."]
-position = Vector2( 594, 353 )
-scale = Vector2( 2, 1 )
+position = Vector2( 169, 253 )
+scale = Vector2( 3, 1.5 )
 texture = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="Cover"]
+margin_left = -46.6667
+margin_top = 160.0
+margin_right = 6.33334
+margin_bottom = 201.0
+text = "Exit"
+
+[node name="Button2" type="Button" parent="Cover"]
+margin_left = -45.0
+margin_top = 91.0
+margin_right = 34.0
+margin_bottom = 143.0
+text = "DCPU Test"

@@ -6,26 +6,43 @@
 [node name="DCPU" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="DcpuInputBg" type="Sprite" parent="."]
+[node name="BG" type="Sprite" parent="."]
 position = Vector2( 750, 450 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
 
-[node name="LineEdit" type="LineEdit" parent="DcpuInputBg"]
-margin_left = -195.0
-margin_top = -50.0
-margin_right = 205.0
+[node name="command" type="LineEdit" parent="BG"]
+margin_left = -196.0
+margin_top = -138.0
+margin_right = 204.0
+margin_bottom = -98.0
 clear_button_enabled = true
 placeholder_text = "type \"help\" for commands"
 
-[node name="Button" type="Button" parent="DcpuInputBg"]
+[node name="param1" type="LineEdit" parent="BG"]
+margin_left = -195.0
+margin_top = -89.0
+margin_right = 205.0
+margin_bottom = -49.0
+clear_button_enabled = true
+placeholder_text = "parameter 1"
+
+[node name="param2" type="LineEdit" parent="BG"]
+margin_left = -195.0
+margin_top = -38.0
+margin_right = 205.0
+margin_bottom = 2.0
+clear_button_enabled = true
+placeholder_text = "parameter 2"
+
+[node name="Button" type="Button" parent="BG"]
 margin_left = -39.0
 margin_top = 22.0
 margin_right = 61.0
 margin_bottom = 72.0
 text = "Send"
 
-[node name="Output" type="Label" parent="DcpuInputBg"]
+[node name="Output" type="Label" parent="BG"]
 margin_left = -246.0
 margin_top = 134.0
 margin_right = 248.0
@@ -34,4 +51,4 @@ rect_clip_content = true
 uppercase = true
 max_lines_visible = 999
 
-[connection signal="pressed" from="DcpuInputBg/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="BG/Button" to="." method="_on_Button_pressed"]
