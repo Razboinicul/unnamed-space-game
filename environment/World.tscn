@@ -26,6 +26,11 @@ ssao_intensity = 4.0
 
 [node name="Spatial" type="Spatial"]
 
+[node name="BG Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -15.0
+autoplay = true
+
 [node name="FPSCounter" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
@@ -68,8 +73,3 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-
-[node name="Music" type="AudioStreamPlayer" parent="Player"]
-stream = ExtResource( 2 )
-volume_db = -15.0
-autoplay = true
