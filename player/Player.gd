@@ -55,7 +55,7 @@ func _process(_delta: float):
 				
 	if Input.is_action_pressed("interact"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		get_tree().change_scene("res://DCPU/DCPU.tscn")
+		get_tree().change_scene("res://ShipComputer/ShipComputer.tscn")
 
 func _physics_process(_delta: float):
 	var snap_vector = Vector3(0, -1, 0)

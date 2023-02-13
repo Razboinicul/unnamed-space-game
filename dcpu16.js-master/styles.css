@@ -1,0 +1,233 @@
+
+.Background
+{
+	background-color: #171814;
+}
+
+
+#Display
+{
+	float:left;
+	width:49%;
+	height:50%;
+
+	color: #3366FF;
+	background-color: #000025;
+
+	border: 2px solid #3366FF;
+	border-radius: 10px;
+
+	-webkit-box-shadow: 0px 0px 10px 5px #0066FF inset, 0px 0px 5px 2px #0066FF;
+	   -moz-box-shadow: 0px 0px 10px 5px #0066FF inset, 0px 0px 5px 2px #0066FF;
+	        box-shadow: 0px 0px 10px 5px #0066FF inset, 0px 0px 5px 2px #0066FF;
+}
+
+
+#CodeEditor
+{
+	float:right;
+	width:50%;
+}
+
+
+#Registers
+{
+	float:left;
+	width:48.5%;
+	margin-top:10px;
+
+	font-size:10px;
+	font-family:verdana;
+
+	color: #F8F8F2;
+	background-color: #272822;
+
+	border:0px;
+	border-top: 1px solid #3C3D39;
+	border-left: 1px solid #3C3D39;
+	border-right: 1px solid #2C2D29;
+	border-bottom: 1px solid #2C2D29;
+
+	padding: 5px;
+
+	-webkit-box-shadow: 0px 0px 0px 1px #0b0c0a;
+	   -moz-box-shadow: 0px 0px 0px 1px #0b0c0a;
+	        box-shadow: 0px 0px 0px 1px #0b0c0a;
+}
+
+
+.Info
+{
+	width:98.5%;
+	margin:10px 0 10px 0;
+	padding:5px;
+	border: 1px dashed black;
+	color:#777;
+	background-color: #151515;
+	font-size:10px;
+	font-family:verdana;
+}
+
+
+.Info a
+{
+	color:#CCC;
+	text-decoration:none;
+}
+.Info a:hover
+{
+	border-bottom: 1px dotted white;
+}
+.InfoOpen
+{
+	position:fixed;
+	display:none;
+	height:90%;
+	z-index:20;
+	opacity:0.9;
+}
+
+
+.BreakPoint
+{
+	background-image:url('breakpoint.gif');
+	background-repeat:no-repeat;
+}
+.DebugStepLine
+{
+	border-radius: 3px !important;
+	background-color: #550000 !important;
+}
+
+
+.Ruler
+{
+	width:100%;
+	margin: 2px 0 6px 0;
+	border-bottom: 1px solid #999;
+}
+
+
+.RegRow
+{
+	width:50%;
+	clear:both;
+}
+.RegCol
+{
+	float:left;
+	width:33%;
+	padding:5px 0;
+}
+.RegName
+{
+	float:left;
+	width:25%;
+	padding:2px 0 0 0;
+}
+.RegEdit
+{
+	float:left;
+}
+.RegInput
+{
+	width:50px;
+	height:19px;
+	padding:2px;
+	border: 1px solid black;
+	border-bottom:1px solid #979892;
+	border-right:1px solid #979892;
+
+	font-family:verdana;
+	font-size:10px;
+	
+	background-color:#676862;
+}
+
+
+.Button
+{
+	position:absolute;
+
+	font-family:monospace;
+
+	color:#CCC;
+	background-color:#151515;
+	margin: 10px 0px 0px 10px;
+	border: 1px solid #444;
+
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */	
+
+	opacity: 0.5;
+}
+.Button:hover
+{
+	opacity: 1;
+}
+
+
+
+.LineError
+{
+	border: dashed 1px #881814 !important;
+	border-radius: 3px !important;
+}
+
+.ErrorBox
+{
+	color: black;
+	background-color:#CCBB00;
+
+	width:80%;
+	height:12px;
+
+	opacity:0.8;
+
+	border: solid 1px transparent;
+	border-radius: 5px;
+}
+
+
+/* Overrides for CodeMirror */
+
+
+.CodeMirror
+{
+	width:95%;
+	height:80%;
+
+	color: #F8F8F2;
+	background-color: #272822;
+
+	border:0px;
+	border-top: 1px solid #3C3D39;
+	border-left: 1px solid #3C3D39;
+	border-right: 1px solid #2C2D29;
+	border-bottom: 1px solid #2C2D29;
+
+	padding: 10px;
+
+	-webkit-box-shadow: 0px 0px 0px 1px #0b0c0a;
+	   -moz-box-shadow: 0px 0px 0px 1px #0b0c0a;
+	        box-shadow: 0px 0px 0px 1px #0b0c0a;
+}
+
+
+.CodeMirror-gutter
+{
+	width:4em;
+}
+.CodeMirror-gutter-text
+{
+	border-right: 1px solid #333;
+	padding-right: 10px;
+}
+
+
+.CodeMirror-scroll
+{
+	height:100%;
+}
