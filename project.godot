@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Unnamed Space GAme"
+config/name="Unnamed Space Game"
 run/main_scene="res://environment/World.tscn"
 boot_splash/show_image=false
 boot_splash/fullsize=false
