@@ -8,17 +8,10 @@
 [ext_resource path="res://environment/Ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://environment/wall_material.tres" type="Material" id=7]
 
-[sub_resource type="ProceduralSky" id=8]
-sky_top_color = Color( 0.0588235, 0.337255, 0.556863, 1 )
-sky_horizon_color = Color( 0.286275, 0.137255, 0.0235294, 1 )
-ground_bottom_color = Color( 0.0392157, 0.156863, 0.290196, 1 )
-ground_horizon_color = Color( 0.0313726, 0.145098, 0.266667, 1 )
-sun_color = Color( 0.984314, 0.329412, 0.0470588, 1 )
-sun_latitude = 5.0
-sun_longitude = 60.0
+[sub_resource type="PanoramaSky" id=8]
 
 [sub_resource type="Environment" id=7]
-background_mode = 2
+background_mode = 3
 background_sky = SubResource( 8 )
 fog_color = Color( 0.160784, 0.301961, 0.466667, 1 )
 fog_depth_end = 30.0
@@ -68,6 +61,7 @@ environment = SubResource( 7 )
 transform = Transform( -0.5, -0.296198, 0.813798, 0, 0.939693, 0.34202, -0.866025, 0.17101, -0.469846, 0, 0, 0 )
 layers = 262144
 light_color = Color( 0.94902, 0.580392, 0.247059, 1 )
+light_energy = 0.75
 light_cull_mask = 4294443007
 shadow_enabled = true
 
