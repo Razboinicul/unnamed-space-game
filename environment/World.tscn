@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://FPSCounter.gd" type="Script" id=1]
 [ext_resource path="res://soundtrack/C418 - 0x10c - 02 0.mp3" type="AudioStream" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://environment/Floor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://environment/Ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://environment/wall_material.tres" type="Material" id=7]
+[ext_resource path="res://HealthCounter.gd" type="Script" id=8]
+[ext_resource path="res://environment/dcpu/DCPU_model.tscn" type="PackedScene" id=9]
+[ext_resource path="res://environment/Gun.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PanoramaSky" id=8]
 
@@ -18,6 +21,7 @@ fog_depth_end = 30.0
 ssao_intensity = 4.0
 
 [node name="Spatial" type="Spatial"]
+script = ExtResource( 8 )
 
 [node name="BG Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
@@ -67,3 +71,20 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="Health" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 850.0
+margin_right = 96.0
+margin_bottom = 893.0
+text = "Health: 100"
+
+[node name="Gun" parent="." instance=ExtResource( 10 )]
+transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.798439, 0.209164, -1.70889 )
+
+[node name="DCPU_model" parent="." instance=ExtResource( 9 )]
+transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -1, 2 )
+
+[connection signal="input_event" from="DCPU_model" to="DCPU_model" method="_on_DCPU_model_input_event"]
+[connection signal="mouse_entered" from="DCPU_model" to="DCPU_model" method="_on_DCPU_model_mouse_entered"]
+[connection signal="mouse_exited" from="DCPU_model" to="DCPU_model" method="_on_DCPU_model_mouse_exited"]

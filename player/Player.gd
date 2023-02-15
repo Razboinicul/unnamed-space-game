@@ -10,6 +10,7 @@ const PLAYER_MOVE_SPEED = 4
 onready var Camera = $Camera
 onready var GRAVITY = ProjectSettings.get("physics/3d/default_gravity") / 1000
 onready var animation_tree = $character/AnimationTree
+onready var health = 100
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -52,7 +53,10 @@ func _process(_delta: float):
 				
 	if Input.is_action_pressed("ui_exit"):
 		get_tree().quit()
-				
+		
+	if Input.is_action_pressed("test"):
+		health -= 1
+
 	if Input.is_action_pressed("interact"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene("res://ShipComputer/ShipComputer.tscn")

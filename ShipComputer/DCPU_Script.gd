@@ -33,72 +33,23 @@ func _ready():
 	button = get_node("BG/Button")
 	
 func detect_vars(v1, v2):
-	if v1 == "ram1" and v2 == "ram1":
+	if v1 == "ram1":
 		var1 = ram1
-		var2 = ram1
-	elif v1 == "ram2" and v2 == "ram2":
-		var1 = ram2
-		var2 = ram2
-	elif v1 == "ram3" and v2 == "ram3":
-		var1 = ram3
-		var2 = ram3
-	elif v1 == "ram4" and v2 == "ram4":
-		var1 = ram4
-		var2 = ram4
-	elif v1 == "ram1" and v2 == "ram2":
-		var1 = ram1
-		var2 = ram2
-	elif v1 == "ram1" and v2 == "ram3":
-		var1 = ram1
-		var2 = ram3
-	elif v1 == "ram1" and v2 == "ram4":
-		var1 = ram1
-		var2 = ram4
-	elif v1 == "ram2" and v2 == "ram1":
-		var1 = ram2
-		var2 = ram1
-	elif v1 == "ram2" and v2 == "ram3":
-		var1 = ram2
-		var2 = ram3
-	elif v1 == "ram2" and v2 == "ram4":
-		var1 = ram2
-		var2 = ram4
-	elif v1 == "ram3" and v2 == "ram1":
-		var1 = ram3
-		var2 = ram1
-	elif v1 == "ram3" and v2 == "ram2":
-		var1 = ram3
-		var2 = ram2
-	elif v1 == "ram3" and v2 == "ram4":
-		var1 = ram3
-		var2 = ram4
-	elif v1 == "ram4" and v2 == "ram1":
-		var1 = ram4
-		var2 = ram1
-	elif v1 == "ram4" and v2 == "ram2":
-		var1 = ram3
-		var2 = ram2
-	elif v1 == "ram4" and v2 == "ram3":
-		var1 = ram3
-		var2 = ram3
-	elif v1 == "ram1":
-		var1 = ram1
-	elif v2 == "ram1":
-		var2 = ram1
 	elif v1 == "ram2":
 		var1 = ram2
-	elif v2 == "ram2":
-		var2 = ram2
 	elif v1 == "ram3":
 		var1 = ram3
-	elif v2 == "ram3":
-		var2 = ram3
 	elif v1 == "ram4":
 		var1 = ram4
+
+	if v2 == "ram1":
+		var2 = ram1
+	elif v2 == "ram2":
+		var2 = ram2
+	elif v2 == "ram3":
+		var2 = ram3
 	elif v2 == "ram4":
 		var2 = ram4
-	else:
-		pass
 		
 func detect_command(cmd, param1, param2):
 	if cmd == "help":
