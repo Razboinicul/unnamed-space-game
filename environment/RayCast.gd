@@ -1,6 +1,6 @@
 extends RayCast
 
-onready var player = get_node("Player")
+onready var player = get_tree().get_root().get_node("Player")
 func _ready():
 	set_process(true)
 

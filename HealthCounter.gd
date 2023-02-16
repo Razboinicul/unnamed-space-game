@@ -7,6 +7,7 @@ func _ready():
 	
 func _process(_delta: float):
 	if player.health == 0:
-		get_tree().quit()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().change_scene("res://death/Death.tscn")
 	else:
 		label.text = 'Health: %s' % player.health
