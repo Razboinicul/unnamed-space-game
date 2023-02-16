@@ -9,18 +9,6 @@ script/source = "extends RigidBody
 
 func _ready():
 	pass
-
-func _on_DCPU_model_input_event(camera, event, position, normal, shape_idx):
-	var mouse_click = event as InputEventMouseButton
-	if mouse_click and mouse_click.button_index == 1 and mouse_click.pressed:
-		print(\"clicked\")
-		get_tree().change_scene(\"res://DCPU/DCPU.tscn\")
-
-func _on_DCPU_model_mouse_entered():
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-func _on_DCPU_model_mouse_exited():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 "
 
 [sub_resource type="ArrayMesh" id=7]

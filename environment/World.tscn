@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://FPSCounter.gd" type="Script" id=1]
 [ext_resource path="res://soundtrack/C418 - 0x10c - 02 0.mp3" type="AudioStream" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://HealthCounter.gd" type="Script" id=8]
 [ext_resource path="res://environment/dcpu/DCPU_model.tscn" type="PackedScene" id=9]
 [ext_resource path="res://environment/Gun.tscn" type="PackedScene" id=10]
+[ext_resource path="res://environment/RayCast.gd" type="Script" id=11]
 
 [sub_resource type="PanoramaSky" id=8]
 
@@ -72,6 +73,12 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 
+[node name="RayCast" type="RayCast" parent="Player"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 1, 0 )
+script = ExtResource( 11 )
+
 [node name="Health" type="Label" parent="."]
 margin_left = 1.0
 margin_top = 850.0
@@ -81,10 +88,14 @@ text = "Health: 100"
 
 [node name="Gun" parent="." instance=ExtResource( 10 )]
 transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.798439, 0.209164, -1.70889 )
+mass = 1.0
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 
-[node name="DCPU_model" parent="." instance=ExtResource( 9 )]
+[node name="DCPU" parent="." instance=ExtResource( 9 )]
 transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -1, 2 )
-
-[connection signal="input_event" from="DCPU_model" to="DCPU_model" method="_on_DCPU_model_input_event"]
-[connection signal="mouse_entered" from="DCPU_model" to="DCPU_model" method="_on_DCPU_model_mouse_entered"]
-[connection signal="mouse_exited" from="DCPU_model" to="DCPU_model" method="_on_DCPU_model_mouse_exited"]
+script = null
