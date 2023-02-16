@@ -52,7 +52,8 @@ func _process(_delta: float):
 		self.move_left_right(+1)
 				
 	if Input.is_action_pressed("ui_exit"):
-		get_tree().quit()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().change_scene("res://title_screen/title_screen.tscn")
 		
 	if Input.is_action_pressed("test"):
 		health -= 1
