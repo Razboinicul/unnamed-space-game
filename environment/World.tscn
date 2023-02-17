@@ -41,6 +41,8 @@ margin_right = 106.0
 margin_bottom = 38.0
 text = "F = Flashlight
 T = take damage
+Q = gravity -1
+E = gravity +1
 WASD = Move"
 
 [node name="Floor" parent="." instance=ExtResource( 5 )]
@@ -99,3 +101,10 @@ axis_lock_angular_z = true
 [node name="DCPU" parent="." instance=ExtResource( 9 )]
 transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -1, 2 )
 script = null
+
+[node name="Gravity" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 820.0
+margin_right = 96.0
+margin_bottom = 863.0
+text = "Gravity: -"

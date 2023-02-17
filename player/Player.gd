@@ -3,6 +3,7 @@ extends KinematicBody
 var velocity = Vector3(0, 0, 0)
 var direction = Vector3(0, 0, 0) # Used for animation
 var playing
+onready var gravity_label = get_node("/root/Spatial/Gravity")
 
 const JUMP = 4
 const PLAYER_MOVE_SPEED = 4
@@ -50,6 +51,20 @@ func _process(_delta: float):
 
 	elif Input.is_action_pressed("ui_right"):
 		self.move_left_right(+1)
+		
+	elif Input.is_action_pressed("gravity +1"):
+		GRAVITY += 0.01
+		var l_gravity = GRAVITY * 100
+		if l_gravity >= 101:
+			GRAVITY = 100/1000
+		gravity_label.text = 'Gravity: %s' % l_gravity
+		
+	elif Input.is_action_pressed("gravity -1"):
+		GRAVITY -= 0.01
+		var l_gravity = GRAVITY * 100
+		if l_gravity <= 1:
+			GRAVITY = 2/1000
+		gravity_label.text = 'Gravity: %s' % l_gravity
 				
 	if Input.is_action_pressed("ui_exit"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

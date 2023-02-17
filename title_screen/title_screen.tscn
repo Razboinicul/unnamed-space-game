@@ -24,7 +24,7 @@ margin_left = 4.0
 margin_top = 359.0
 margin_right = 197.0
 margin_bottom = 384.0
-text = "unnamed Space Game"
+text = "Unnamed Space Game"
 align = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
