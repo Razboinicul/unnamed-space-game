@@ -15,6 +15,8 @@ onready var health = 100
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	var l_gravity = GRAVITY * 100
+	gravity_label.text = 'Gravity: %s' % l_gravity
 	playing = true
 
 func move_forward_back(in_direction: int):
@@ -55,15 +57,11 @@ func _process(_delta: float):
 	elif Input.is_action_pressed("gravity +1"):
 		GRAVITY += 0.01
 		var l_gravity = GRAVITY * 100
-		if l_gravity >= 101:
-			GRAVITY = 100/1000
 		gravity_label.text = 'Gravity: %s' % l_gravity
 		
 	elif Input.is_action_pressed("gravity -1"):
 		GRAVITY -= 0.01
 		var l_gravity = GRAVITY * 100
-		if l_gravity <= 1:
-			GRAVITY = 2/1000
 		gravity_label.text = 'Gravity: %s' % l_gravity
 				
 	if Input.is_action_pressed("ui_exit"):
