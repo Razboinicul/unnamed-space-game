@@ -44,7 +44,7 @@ F = Flashlight
 T = take damage
 Q = gravity -1
 E = gravity +1
-Press the computer to open the tablet"
+Press the DCPU to open the temporary DCPU"
 
 [node name="Floor" parent="." instance=ExtResource( 5 )]
 transform = Transform( 64, 0, 0, 0, 1, 0, 0, 0, 64, 0, -2, 0 )
