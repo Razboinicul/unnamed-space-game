@@ -5,27 +5,57 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -700.0
+margin_top = -400.0
+margin_right = 4300.0
+margin_bottom = 5600.0
+rect_scale = Vector2( 2, 2 )
+color = Color( 0, 0, 0, 1 )
+
 [node name="Button" type="Button" parent="."]
-margin_left = 28.9999
-margin_top = 493.0
-margin_right = 81.9999
-margin_bottom = 534.0
+margin_left = 30.0
+margin_top = 550.0
+margin_right = 83.0
+margin_bottom = 591.0
 text = "Exit"
 
+[node name="Button5" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 490.0
+margin_right = 93.0
+margin_bottom = 531.0
+text = "Options"
+
 [node name="Button2" type="Button" parent="."]
-margin_left = 27.0
-margin_top = 421.0
-margin_right = 106.0
-margin_bottom = 473.0
-text = "Play"
+margin_left = 30.0
+margin_top = 420.0
+margin_right = 150.0
+margin_bottom = 470.0
+text = "Play Singleplayer"
 
 [node name="Label" type="Label" parent="."]
 margin_left = 4.0
-margin_top = 359.0
+margin_top = 150.0
 margin_right = 197.0
-margin_bottom = 384.0
+margin_bottom = 175.0
+rect_scale = Vector2( 1.5, 1.5 )
 text = "Unnamed Space Game"
 align = 1
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 350.0
+margin_right = 150.0
+margin_bottom = 400.0
+text = "Play Multiplayer(in progress)"
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 280.0
+margin_right = 223.0
+margin_bottom = 330.0
+text = "Play Hyperplayer(in progress)"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
