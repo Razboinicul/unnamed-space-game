@@ -16,20 +16,29 @@ align = 1
 valign = 1
 
 [node name="Retry" type="Button" parent="."]
-margin_left = 680.0
+margin_left = 660.0
 margin_top = 277.0
-margin_right = 780.0
+margin_right = 796.0
 margin_bottom = 327.0
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Retry"
 
 [node name="Exit" type="Button" parent="."]
-margin_left = 680.0
-margin_top = 406.0
-margin_right = 780.0
-margin_bottom = 456.0
+margin_left = 660.0
+margin_top = 475.0
+margin_right = 796.0
+margin_bottom = 525.0
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Exit"
 
+[node name="title_screen" type="Button" parent="."]
+margin_left = 660.0
+margin_top = 380.0
+margin_right = 796.0
+margin_bottom = 430.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Back to title screen"
+
 [connection signal="pressed" from="Retry" to="." method="_on_Retry_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="title_screen" to="." method="_on_title_screen_pressed"]
