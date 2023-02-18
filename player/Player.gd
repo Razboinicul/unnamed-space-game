@@ -58,7 +58,6 @@ func _process(_delta: float):
 		GRAVITY += 0.01
 		var l_gravity = GRAVITY * 100
 		gravity_label.text = 'Gravity: %s' % l_gravity
-		var t = Timer.new()
 		
 	elif Input.is_action_pressed("gravity -1"):
 		GRAVITY -= 0.01
