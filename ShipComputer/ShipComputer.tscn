@@ -71,5 +71,34 @@ margin_right = -232.0
 margin_bottom = -234.0
 text = "X"
 
+[node name="Help" type="ColorRect" parent="."]
+margin_left = 1092.0
+margin_top = 195.0
+margin_right = 1399.0
+margin_bottom = 693.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="Help"]
+margin_left = 109.0
+margin_top = 4.0
+margin_right = 141.0
+margin_bottom = 19.0
+rect_scale = Vector2( 2.5, 2.5 )
+text = "Help"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help"]
+margin_left = 1.0
+margin_top = 61.0
+margin_right = 244.2
+margin_bottom = 411.4
+rect_scale = Vector2( 1.25, 1.25 )
+text = "help - see commands
+add - param1 + param2
+substract - param1 - param2
+multiply - param1 * param2
+divide - param1 : param2
+store - store param2 in param1
+exit - go to main menu"
+
 [connection signal="pressed" from="BG/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="BG/Exit" to="." method="_on_Exit_pressed"]

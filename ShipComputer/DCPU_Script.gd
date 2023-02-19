@@ -50,6 +50,14 @@ func detect_vars(v1, v2):
 		var2 = ram3
 	elif v2 == "ram4":
 		var2 = ram4
+	elif v1 != "ram1" and v1 != "ram2" and v1 != "ram3" and v1 != "ram4":
+		var1 = v1
+	elif v2 != "ram1" and v2 != "ram2" and v2 != "ram3" and v2 != "ram4":
+		var2 = v2
+	else:
+		var1 = v1
+		var2 = v2
+		print("Warning: no vars specified")
 		
 func detect_command(cmd, param1, param2):
 	if cmd == "help":
@@ -58,10 +66,10 @@ add - param1 + param2
 substract - param1 - param2
 multiply - param1 * param2
 divide - param1 : param2
-exit - exit the DCPU
+exit - go to main menu
 """
 	elif cmd == "exit":
-		get_tree().quit()
+		get_tree().change_scene("res://title_screen/title_screen.tscn")
 	elif cmd == "add":
 		if v_text == "vars":
 			detect_vars(param1, param2)
