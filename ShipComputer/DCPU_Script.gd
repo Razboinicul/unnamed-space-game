@@ -1,24 +1,23 @@
 extends Node2D
-var command
-var param1
-var param2
-var var1
-var var2
-var parameter1
-var parameter2
-var button
-var exit
-var output
-var out_label
-var vars
-var v_text
-var result
-var text
-var ram1
-var ram2
-var ram3
-var ram4
-var last_res
+onready var command
+onready var param1
+onready var param2
+onready var var1
+onready var var2
+onready var parameter1
+onready var parameter2
+onready var button
+onready var exit
+onready var output
+onready var out_label
+onready var vars
+onready var v_text
+onready var result
+onready var text
+onready var ram1
+onready var ram2
+onready var ram3
+onready var ram4
 
 func _ready():
 	ram1 = 5
@@ -33,7 +32,9 @@ func _ready():
 	button = get_node("BG/Button")
 	
 func detect_vars(v1, v2):
-	if v1 == "ram1":
+	if v1 != "ram1" && v1 != "ram2" && v1 != "ram3" && v1 != "ram4":
+		var1 = v1
+	elif v1 == "ram1":
 		var1 = ram1
 	elif v1 == "ram2":
 		var1 = ram2
@@ -42,7 +43,9 @@ func detect_vars(v1, v2):
 	elif v1 == "ram4":
 		var1 = ram4
 
-	if v2 == "ram1":
+	if v2 != "ram1" && v2 != "ram2" && v2 != "ram3" && v2 != "ram4":
+		var2 = v2
+	elif v2 == "ram1":
 		var2 = ram1
 	elif v2 == "ram2":
 		var2 = ram2
@@ -50,25 +53,13 @@ func detect_vars(v1, v2):
 		var2 = ram3
 	elif v2 == "ram4":
 		var2 = ram4
-	elif v1 != "ram1" and v1 != "ram2" and v1 != "ram3" and v1 != "ram4":
-		var1 = v1
-	elif v2 != "ram1" and v2 != "ram2" and v2 != "ram3" and v2 != "ram4":
-		var2 = v2
 	else:
 		var1 = v1
 		var2 = v2
 		print("Warning: no vars specified")
 		
 func detect_command(cmd, param1, param2):
-	if cmd == "help":
-		output = """help - see commands
-add - param1 + param2
-substract - param1 - param2
-multiply - param1 * param2
-divide - param1 : param2
-exit - go to main menu
-"""
-	elif cmd == "exit":
+	if cmd == "exit":
 		get_tree().change_scene("res://title_screen/title_screen.tscn")
 	elif cmd == "add":
 		if v_text == "vars":
@@ -80,8 +71,8 @@ exit - go to main menu
 		else:
 			param1 = int(param1)
 			param2 = int(param2)
-			param1 += param2
-			output = param1
+			result = param1 + param2
+			output = result
 	elif cmd == "substract":
 		if v_text == "vars":
 			detect_vars(param1, param2)
@@ -92,8 +83,8 @@ exit - go to main menu
 		else:
 			param1 = int(param1)
 			param2 = int(param2)
-			param1 -= param2
-			output = param1
+			result = param1 - param2
+			output = result
 	elif cmd == "multiply":
 		if v_text == "vars":
 			detect_vars(param1, param2)
@@ -104,7 +95,6 @@ exit - go to main menu
 		else:
 			param1 = int(param1)
 			param2 = int(param2)
-			param1 += param2
 			result = param1* param2
 			output = result
 	elif cmd == "divide":
@@ -117,7 +107,6 @@ exit - go to main menu
 		else:
 			param1 = int(param1)
 			param2 = int(param2)
-			param1 += param2
 			result = param1 / param2
 			output = result
 	elif cmd == "store":
