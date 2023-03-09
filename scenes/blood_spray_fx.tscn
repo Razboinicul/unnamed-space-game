@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+radius = 0.125
+height = 0.25
+
+[node name="blood_spray_fx" type="CPUParticles"]
+amount = 50
+explosiveness = 0.2
+randomness = 0.15
+mesh = SubResource( 2 )
+spread = 75.0
+initial_velocity = 5.0
+

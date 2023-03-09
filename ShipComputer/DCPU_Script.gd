@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 onready var command
 onready var param1
 onready var param2
@@ -164,4 +164,4 @@ func _on_Button_pressed():
 func _on_Exit_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	queue_free()
-	get_tree().change_scene("environment/World.tscn")
+	get_tree().change_scene("res://Singleplayer/environment/World.tscn")

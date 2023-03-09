@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/impact.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+radius = 0.125
+height = 0.25
+
+[node name="wound" type="MeshInstance"]
+mesh = SubResource( 2 )
+material/0 = null
+script = ExtResource( 1 )
+

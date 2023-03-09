@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ShipComputer/img/DCPU_InputBG.png" type="Texture" id=1]
+
+[node name="Open DCPU" type="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1024.0
+margin_bottom = 600.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -395.0
+margin_bottom = 173.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 233.0
+margin_top = 2.0
+margin_right = 312.0
+margin_bottom = 41.0
+rect_rotation = 360.0
+rect_scale = Vector2( 2, 1.5 )
+text = "Open DCPU"
+valign = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_left = 129.0
+margin_top = 64.0
+margin_right = 343.0
+margin_bottom = 149.0
+rect_rotation = 360.0
+rect_scale = Vector2( 1.25, 1.25 )
+text = "Open the DCPU for the first time"
+
+[node name="DcpuInputBg" type="Sprite" parent="ColorRect"]
+position = Vector2( 61.6082, 85.7977 )
+scale = Vector2( 0.238432, 0.343191 )
+texture = ExtResource( 1 )

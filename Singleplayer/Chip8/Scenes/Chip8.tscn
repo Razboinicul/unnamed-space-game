@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Chip8/Scripts/Chip8.gd" type="Script" id=1]
+[ext_resource path="res://Chip8/Assets/Sounds/beep.wav" type="AudioStream" id=2]
+
+[node name="Chip8" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+autoPixelScale = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[connection signal="item_rect_changed" from="." to="." method="_on_Display_item_rect_changed"]
