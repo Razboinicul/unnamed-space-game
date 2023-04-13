@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ShipComputer/DCPU_Script.gd" type="Script" id=1]
-[ext_resource path="res://ShipComputer/img/DCPU_InputBG.png" type="Texture" id=2]
+[ext_resource path="res://ShipComputer/img/DCPU_InputBG.png" type="Texture2D" id=2]
 [ext_resource path="res://soundtrack/C418 - 0x10c - 02 0.mp3" type="AudioStream" id=3]
 
 [node name="DCPU" type="Control"]
@@ -9,10 +9,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -512.0
-margin_top = -300.0
-margin_right = 512.0
-margin_bottom = 300.0
+offset_left = -512.0
+offset_top = -300.0
+offset_right = 512.0
+offset_bottom = 300.0
 script = ExtResource( 1 )
 
 [node name="BG Music" type="AudioStreamPlayer" parent="."]
@@ -21,26 +21,26 @@ volume_db = -15.0
 autoplay = true
 
 [node name="Help" type="ColorRect" parent="."]
-margin_left = 663.0
-margin_top = 63.0
-margin_right = 970.0
-margin_bottom = 561.0
+offset_left = 663.0
+offset_top = 63.0
+offset_right = 970.0
+offset_bottom = 561.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Label" type="Label" parent="Help"]
-margin_left = 109.0
-margin_top = 4.0
-margin_right = 141.0
-margin_bottom = 19.0
-rect_scale = Vector2( 2.5, 2.5 )
+offset_left = 109.0
+offset_top = 4.0
+offset_right = 141.0
+offset_bottom = 19.0
+scale = Vector2( 2.5, 2.5 )
 text = "Help"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Help"]
-margin_left = 1.0
-margin_top = 61.0
-margin_right = 244.2
-margin_bottom = 411.4
-rect_scale = Vector2( 1.25, 1.25 )
+offset_left = 1.0
+offset_top = 61.0
+offset_right = 244.2
+offset_bottom = 411.4
+scale = Vector2( 1.25, 1.25 )
 text = "help - see commands
 add - param1 + param2
 substract - param1 - param2
@@ -49,70 +49,70 @@ divide - param1 : param2
 store - store param2 in param1
 exit - go to main menu"
 
-[node name="BG" type="Sprite" parent="."]
+[node name="BG" type="Sprite2D" parent="."]
 position = Vector2( 380, 298 )
 texture = ExtResource( 2 )
 
 [node name="command" type="LineEdit" parent="BG"]
-margin_left = -196.0
-margin_top = -138.0
-margin_right = 50.0
-margin_bottom = -98.0
+offset_left = -196.0
+offset_top = -138.0
+offset_right = 50.0
+offset_bottom = -98.0
 clear_button_enabled = true
 placeholder_text = "type \"help\" for commands"
 caret_blink = true
-caret_blink_speed = 0.5
+caret_blink_interval = 0.5
 
 [node name="param1" type="LineEdit" parent="BG"]
-margin_left = -195.0
-margin_top = -89.0
-margin_right = 205.0
-margin_bottom = -49.0
+offset_left = -195.0
+offset_top = -89.0
+offset_right = 205.0
+offset_bottom = -49.0
 clear_button_enabled = true
 placeholder_text = "parameter 1"
 caret_blink = true
-caret_blink_speed = 0.5
+caret_blink_interval = 0.5
 
 [node name="param2" type="LineEdit" parent="BG"]
-margin_left = -195.0
-margin_top = -38.0
-margin_right = 205.0
-margin_bottom = 2.0
+offset_left = -195.0
+offset_top = -38.0
+offset_right = 205.0
+offset_bottom = 2.0
 clear_button_enabled = true
 placeholder_text = "parameter 2"
 caret_blink = true
-caret_blink_speed = 0.5
+caret_blink_interval = 0.5
 
 [node name="vars" type="LineEdit" parent="BG"]
-margin_left = 60.0
-margin_top = -137.0
-margin_right = 200.0
-margin_bottom = -102.0
+offset_left = 60.0
+offset_top = -137.0
+offset_right = 200.0
+offset_bottom = -102.0
 placeholder_text = "type \"vars\" for mem"
 caret_blink = true
-caret_blink_speed = 0.5
+caret_blink_interval = 0.5
 
 [node name="Button" type="Button" parent="BG"]
-margin_left = -39.0
-margin_top = 22.0
-margin_right = 61.0
-margin_bottom = 72.0
+offset_left = -39.0
+offset_top = 22.0
+offset_right = 61.0
+offset_bottom = 72.0
 text = "Send"
 
 [node name="Output" type="Label" parent="BG"]
-margin_left = -246.0
-margin_top = 134.0
-margin_right = 248.0
-margin_bottom = 250.0
-rect_clip_content = true
+offset_left = -246.0
+offset_top = 134.0
+offset_right = 248.0
+offset_bottom = 250.0
+clip_contents = true
 uppercase = true
 max_lines_visible = 999
 
 [node name="Exit" type="Button" parent="BG"]
-margin_left = -265.0
-margin_top = -267.0
-margin_right = -232.0
-margin_bottom = -234.0
+offset_left = -265.0
+offset_top = -267.0
+offset_right = -232.0
+offset_bottom = -234.0
 text = "X"
 
 [connection signal="pressed" from="BG/Button" to="." method="_on_Button_pressed"]

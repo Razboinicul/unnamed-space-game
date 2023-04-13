@@ -1,67 +1,65 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://b6pcd0pokd5my"]
 
-[ext_resource path="res://title_screen/TS_script.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://title_screen/TS_script.gd" id="1"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -700.0
-margin_top = -400.0
-margin_right = 4300.0
-margin_bottom = 5600.0
-rect_scale = Vector2( 2, 2 )
-color = Color( 0, 0, 0, 1 )
+offset_left = -700.0
+offset_top = -400.0
+offset_right = 4300.0
+offset_bottom = 5600.0
+scale = Vector2(2, 2)
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
-margin_left = 4.0
-margin_top = 150.0
-margin_right = 197.0
-margin_bottom = 175.0
-rect_scale = Vector2( 1.5, 1.5 )
+offset_left = 4.0
+offset_top = 150.0
+offset_right = 197.0
+offset_bottom = 175.0
+scale = Vector2(1.5, 1.5)
 text = "Unnamed Space Game"
-align = 1
 
 [node name="Button" type="Button" parent="."]
-margin_left = 30.0
-margin_top = 550.0
-margin_right = 83.0
-margin_bottom = 591.0
+offset_left = 30.0
+offset_top = 550.0
+offset_right = 83.0
+offset_bottom = 591.0
 text = "Exit"
 flat = true
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 30.0
-margin_top = 420.0
-margin_right = 150.0
-margin_bottom = 470.0
+offset_left = 30.0
+offset_top = 420.0
+offset_right = 150.0
+offset_bottom = 470.0
 text = "Play Singleplayer"
 flat = true
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 30.0
-margin_top = 350.0
-margin_right = 223.0
-margin_bottom = 400.0
+offset_left = 30.0
+offset_top = 350.0
+offset_right = 171.0
+offset_bottom = 400.0
+disabled = true
 text = "Play Multiplayer"
 flat = true
-align = 0
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 30.0
-margin_top = 280.0
-margin_right = 228.0
-margin_bottom = 330.0
+offset_left = 30.0
+offset_top = 280.0
+offset_right = 179.0
+offset_bottom = 330.0
 disabled = true
 text = "Play Hyperplayer"
 flat = true
-align = 0
 
 [node name="Button5" type="Button" parent="."]
-margin_left = 30.0
-margin_top = 490.0
-margin_right = 93.0
-margin_bottom = 531.0
+offset_left = 30.0
+offset_top = 490.0
+offset_right = 93.0
+offset_bottom = 531.0
 disabled = true
 text = "Options"
 flat = true
