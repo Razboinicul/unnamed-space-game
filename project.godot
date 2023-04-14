@@ -26,7 +26,7 @@ window/size/height=700
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Mirror/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
@@ -93,10 +93,6 @@ mouse_right={
 [node]
 
 name_casing=2
-
-[physics]
-
-3d/default_gravity=9.8
 
 [rendering]
 

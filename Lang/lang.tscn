@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dol3jhcwcnf3c"]
+
+[ext_resource type="Script" path="res://Lang/lang.gd" id="1_n26f2"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_n26f2")
+
+[node name="Debug" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Console" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 143.0
+offset_right = 383.0
+offset_bottom = 648.0
+
+[node name="Screen" type="Node" parent="."]
+
+[node name="Control" type="Control" parent="Screen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 383.0
+offset_top = 143.0
+offset_right = 1156.0
+offset_bottom = 648.0
